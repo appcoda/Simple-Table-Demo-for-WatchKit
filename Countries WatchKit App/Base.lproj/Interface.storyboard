@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14E7f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Countries_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="2oq-C1-6Al">
+                            <items>
+                                <tableRow identifier="CountryRow" id="7hb-lO-EcR" customClass="CountryRow" customModule="Countries_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Pga-do-l6x">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Country Name" id="BNe-TZ-jgU">
+                                                <fontDescription key="font" type="system" pointSize="20"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="countryName" destination="BNe-TZ-jgU" id="Unf-cY-p5r"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="2oq-C1-6Al" id="Np8-1g-pIh"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+        <!--showDetails-->
+        <scene sceneID="eqe-KO-z8K">
+            <objects>
+                <controller identifier="showDetails" id="d6m-zt-Am7" customClass="DetailInterfaceController" customModule="Countries_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Country Name" id="k3p-JF-MKE"/>
+                        <imageView alignment="center" image="us" id="Ta8-bs-jug"/>
+                        <label alignment="center" text="Capital" id="lzX-8s-pbC">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="center" text="The Capital" id="zqm-7u-1Mf"/>
+                        <label alignment="center" text="Currency" id="6l2-2o-4hE">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="center" text="The Currency" id="jMn-ou-0zG"/>
+                    </items>
+                    <connections>
+                        <outlet property="capital" destination="zqm-7u-1Mf" id="Ncj-PD-gQg"/>
+                        <outlet property="countryName" destination="k3p-JF-MKE" id="sUg-Kp-g5V"/>
+                        <outlet property="currency" destination="jMn-ou-0zG" id="acK-9X-gFr"/>
+                        <outlet property="flag" destination="Ta8-bs-jug" id="fL7-mH-mUm"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="432" y="324"/>
+        </scene>
+    </scenes>
+</document>
